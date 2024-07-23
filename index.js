@@ -1,7 +1,14 @@
-const navbtn=document.querySelector(".nav-right");
-const navbar=document.querySelector(".navbar");
+const btn=document.getElementById('menu-btn');
+const menubar=document.getElementById('navbar');
 
-navbtn.addEventListener('click',()=>{
-    navbtn.classList.toggle('bx-x');
-    navbar.classList.toggle('open');
-})
+function shoemenu()
+{
+   if(menubar.style.top==='-100%')
+   {
+    menubar.style.top='90px';
+   }
+   else
+   {
+    menubar.style.top='-100%';
+   }
+}
