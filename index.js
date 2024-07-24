@@ -1,14 +1,19 @@
-const btn=document.getElementById('menu-btn');
+const btn=document.getElementById('open-btn');
 const menubar=document.getElementById('navbar');
 
-function shoemenu()
+menubar.style.left='-100%';
+
+btn.addEventListener('click',showmenu);
+
+function showmenu()
 {
-   if(menubar.style.top==='-100%')
+   console.log("hello");
+   if(menubar.style.left==='-100%')
    {
-    menubar.style.top='90px';
+    menubar.style.left='0px';
    }
    else
    {
-    menubar.style.top='-100%';
+    menubar.style.left='-100%';
    }
 }
