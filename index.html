@@ -8,6 +8,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="index.js" defer></script>
     <title>Portfolio</title>
 </head>
@@ -15,18 +16,19 @@
 <body>
     <header>
         <span class="title">portfolio</span>
-        <nav  id="navigation">
-            <ul  id="navbar">
-                <li><a href="">home</a></li>
-                <li><a href="">about us</a></li>
-                <li><a href="">project</a></li>
-                <li><a href="">skill</a></li>
-                <li><a href="">contact</a></li>
-            </ul>
+        <nav id="navbar">
+
+            <a href="" style="--i:1;" class="active">home</a>
+            <a href="" style="--i:2;">about us</a>
+            <a href="" style="--i:3;">project</a>
+            <a href="" style="--i:4;">skill</a>
+            <a href="" style="--i:5;">contact</a>
         </nav>
-        <span onclick=showmenu() id="menu-btn" class="material-symbols-outlined">
-            menu
-        </span>
+        <button id="open-btn">
+            <span id="menu-btn" class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
 
     </header>
     <section>
@@ -35,13 +37,15 @@
             <h1><span>het</span> dhorajiya</h1>
             <h3>i am a <span>web developer</span></h3>
             <p>"Currently, I am studying Computer Science and Engineering at the Indian Institute of Information
+
                 Technology, Kota. I am highly passionate about web development, particularly backend development." </p>
 
-            <a href="https://www.instagram.com/__het0305__/"><i class="fa fa-instagram"></i>
+            <a href="https://www.instagram.com/__het0305__/" style="--a:1;"><i class="fa fa-instagram"></i>
             </a>
-            <a href="https://github.com/Het-Dhorajiya-0305/"><i class="fa fa-github"></i>
+            <a href="https://github.com/Het-Dhorajiya-0305/" style="--a:2;"><i class='bx bxl-github'></i></i>
             </a>
-            <a href="https://www.linkedin.com/in/het-dhorajiya-679aa2292/"><i class="fa fa-linkedin-square"></i>
+            <a href="https://www.linkedin.com/in/het-dhorajiya-679aa2292/" style="--a:3;"><i
+                    class='bx bxl-linkedin'></i>
             </a>
         </div>
 
