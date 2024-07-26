@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+html {
+
+    scroll-behavior: smooth;
+}
+
 :root {
     --h1-size: 3.5rem;
     --p-size: 1.8rem;
@@ -15,14 +20,14 @@
 body {
     background-color: black;
     color: white;
-    scroll-behavior: smooth;
 
 }
 
 header {
     background-color: transparent;
+    backdrop-filter: blur(20px);
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
@@ -31,6 +36,7 @@ header {
     z-index: 1000;
     padding: 32px 13%;
     transition: all 0.6s ease;
+    box-shadow: inset 0px 0px 20px #0ef;
 }
 
 .title {
@@ -49,50 +55,47 @@ header button {
 }
 
 #navbar a {
-    display: inline-flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     width: 90px;
     text-decoration: none;
     height: 30px;
     font-weight: 600;
+    text-align: center;
     text-transform: uppercase;
     margin: 0px 20px;
     color: white;
-    animation: slidTop 2s ease ;
+    animation: slidTop 2s ease;
     animation-delay: calc(0.1s*(var(--i)));
 
 }
-@keyframes slidTop{
-    0%{
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-.title{
-    animation:slideleft 3s ease forwards;
-}
-@keyframes slideleft{
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
+
+
+.title {
+    animation: slideleft 3s ease forwards;
 }
 
-#navbar a:hover,
-#navbar a.active {
-    transition: all 1s;
+#navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0ef;
+    transition: width .3s;
+}
+
+#navbar a:hover::after {
+    width: 100%;
+}
+
+
+#navbar a:hover {
     text-shadow: 0px 0px 20px rgba(3, 236, 252, 1);
     color: #0ef;
 }
+
+
 
 #menu-btn {
     font-size: 25px;
@@ -103,58 +106,37 @@ header button {
     color: white;
 }
 
-.show {
-    right: 0;
-}
 
 
 section {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding: 0px 13%;
+    padding: 0px 15%;
+    box-shadow: 0px 15px 80px -10px #0ef;
+}
+
+.hero {
+    width: 500px;
 }
 
 .hero-image {
-    animation: floatImage 5s ease-in-out 2s infinite,zoomin 3s ease ;
+    animation: floatImage 5s ease-in-out 2s infinite, zoomin 3s ease;
     border-radius: 50%;
-    
+
 }
 
-@keyframes zoomin {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-      
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-@keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-    
-    50% {
-        transform: translateY(-20px);
-    }
-    
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .hero-image img {
-    box-shadow: 0px 0px 40px rgba(3, 236, 252, 1);
-    max-width: 700px;
-    width: 100%;
+    box-shadow: 0px 0px 50px rgba(3, 236, 252, 1);
+    margin-top: 20px;
+    max-width: 360px;
     height: 100%;
-    object-fit: contain;
     border-radius: 50%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .hero h1 {
@@ -164,19 +146,10 @@ section {
     line-height: 2;
     margin: 10px 0px;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
-    animation:slideleft 3s ease forwards;
+    animation: slideleft 3s ease forwards;
 
 }
-@keyframes slidTop {
-    0%{
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
+
 
 .hero h1 span {
     color: #0ef;
@@ -205,16 +178,7 @@ section {
     animation: slidBottom 3s ease;
 
 }
-@keyframes slidBottom {
-    0%{
-        transform: translateY(40px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
+
 
 .hero h3 span {
     color: #0ef;
@@ -245,16 +209,7 @@ section {
     animation: slideright 1s ease;
     animation-delay: calc(0.2s*(var(--a)));
 }
-@keyframes slideright {
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+
 
 .hero a:hover {
     transition: all 0.5s;
@@ -263,6 +218,10 @@ section {
     box-shadow: 0px 0px 20px rgba(3, 236, 252, 1);
 
 }
+
+
+/* media query */
+
 
 @media (max-width:1400px) {
     header {
@@ -276,13 +235,13 @@ section {
 
 @media (max-width:1300px) {
     :root {
-        --h1-size: 3rem;
-        --p-size: 1.5rem;
+        --h1-size: 3.5rem;
+        --p-size: 1.8rem;
     }
-   
+
 
     .hero-image img {
-        max-width: 650px;
+        max-width: 360px;
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -300,33 +259,26 @@ section {
     }
 
     :root {
-        --h1-size: 2.6rem;
-        --p-size: 1.2rem;
-    }
-
-    .hero-image img {
-        max-width: 600px;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        border-radius: 50%;
+        --h1-size: 3rem;
+        --p-size: 1.4rem;
     }
 }
 
 @media (max-width:1135px) {
 
     :root {
-        --h1-size: 2.4rem;
+        --h1-size: 2.5rem;
+        --p-size:1.2rem;
+
     }
 
     #menu-btn {
         display: block;
     }
-
+    .hero{
+        width: 400px;
+    }
     .hero-image img {
-        max-width: 580px;
-        width: 100%;
-        height: 100%;
         object-fit: contain;
         border-radius: 50%;
     }
@@ -338,13 +290,14 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgba(26, 26, 26, 0.505);
+        background-color: rgba(26, 26, 26, 0.662);
         backdrop-filter: blur(20px);
         width: 100%;
         height: 300px;
         text-align: center;
         transition: all 1s;
     }
+
     #navbar a {
         /* margin: 5px 0px; */
         padding: 15px 0px;
@@ -354,6 +307,7 @@ section {
         width: 100%;
         /* height: 100%; */
     }
+
     #navbar a:hover {
         /* font-weight: 600; */
         background-color: rgba(0, 0, 0, 0.556);
@@ -364,34 +318,121 @@ section {
 
 }
 
-@media(max-width:1000px) {
-    section {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .hero {
-        text-align: center;
-        order: 2;
-        margin-top: 10px;
-    }
-
-    .hero-image img {
-        margin-top: 90px;
+@media only screen and (max-width:730)
+{
+    .hero{
+        width: 310px;
     }
 }
 
-@media(max-width:620px) {
-    .hero-image img {
-        max-width: 500px;
-        width: 100%;
+@media(max-width:680px) {
+    section {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
         height: 100%;
-        object-fit: contain;
-        border-radius: 50%;
+    }
+    .hero-image img{
+        margin: 100px 0px 10px 0px;
+    }
+
+    .hero {
+        order: 2;
     }
 
     :root {
         --h1-size: 2rem;
+        --p-size:1rem;
     }
 
+}
+
+/* ANIMATION KEYFRAME */
+
+
+@keyframes slidTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slidTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidBottom {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideright {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
