@@ -41,7 +41,7 @@ function AboutMe() {
                     </div>
                     <div className="flex flex-col items-center justify-center max-lg:flex-2">
                         <div className="p-6 relative">
-                            <img src={heroImage} alt="" className='rounded-full animate-float max-w-sm max-sm:max-w-80' />
+                            <img src="https://res.cloudinary.com/dhxwyq122/image/upload/v1755978432/hero_image_f51v0a.jpg" alt="" className='rounded-full animate-float max-w-sm max-sm:max-w-80' />
                         </div>
                         <div className="flex gap-8 pt-4 justify-center ">
                             <a href="https://www.linkedin.com/in/het-dhorajiya-679aa2292/" className='flex flex-col items-center' target='blank'>

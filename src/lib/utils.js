@@ -50,7 +50,7 @@ const projects = [
     id: 1,
     title: "Plashoes E-commerce",
     description: "Plashoes is a full-stack eCommerce website built to provide a seamless online shopping experience for footwear",
-    image: "../../public/plashoes.png",
+    image: "https://res.cloudinary.com/dhxwyq122/image/upload/v1755978213/plashoes_ulbv6g.png",
     tags: ["React", "NodeJs", "MongoDB", "Express"],
     demoUrl: "https://plashoes-frontend.onrender.com/",
     githubUrl: "https://github.com/Het-Dhorajiya-0305/Plashoes",
@@ -60,7 +60,7 @@ const projects = [
     title: "CodeBoard",
     description:
       "Code Board is a real-time code collaboration platform that allows multiple users to edit and share code simultaneously.",
-    image:"../../public/codeboard.png",
+    image:"https://res.cloudinary.com/dhxwyq122/image/upload/v1755978321/codeboard_lpaddh.png",
     tags: ["React", "NodeJs", "MongoDB", "Socket.io","Monaco Editor"],
     demoUrl: "https://code-board-colla.vercel.app/",
     githubUrl: "https://github.com/Het-Dhorajiya-0305/code-board",
@@ -70,7 +70,7 @@ const projects = [
     title: "Real-Time Location Tracker",
     description:
       "The Live Location Tracker is a real-time system that continuously monitors and displays the geographical position of a user or asset on a digital map",
-    image: "../../public/tracker.png",
+    image: "https://res.cloudinary.com/dhxwyq122/image/upload/v1755978357/tracker_qrttz2.png",
     tags: ["React", "Node.js", "Socket.io", "leaflet"],
     demoUrl: "https://realtime-tracker-e55d.onrender.com/",
     githubUrl: "https://github.com/Het-Dhorajiya-0305/realtime-tracker",
