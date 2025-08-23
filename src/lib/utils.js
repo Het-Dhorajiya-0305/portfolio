@@ -45,4 +45,36 @@ const skills = [
     { name: "AWS", level: 55, category: "tools" ,loc:awsLogo},
 ];
 
-export { cn, skills };
+const projects = [
+  {
+    id: 1,
+    title: "Plashoes E-commerce",
+    description: "Plashoes is a full-stack eCommerce website built to provide a seamless online shopping experience for footwear",
+    image: "../../public/plashoes.png",
+    tags: ["React", "NodeJs", "MongoDB", "Express"],
+    demoUrl: "https://plashoes-frontend.onrender.com/",
+    githubUrl: "https://github.com/Het-Dhorajiya-0305/Plashoes",
+  },
+  {
+    id: 2,
+    title: "CodeBoard",
+    description:
+      "Code Board is a real-time code collaboration platform that allows multiple users to edit and share code simultaneously.",
+    image:"../../public/codeboard.png",
+    tags: ["React", "NodeJs", "MongoDB", "Socket.io","Monaco Editor"],
+    demoUrl: "https://code-board-colla.vercel.app/",
+    githubUrl: "https://github.com/Het-Dhorajiya-0305/code-board",
+  },
+  {
+    id: 3,
+    title: "Real-Time Location Tracker",
+    description:
+      "The Live Location Tracker is a real-time system that continuously monitors and displays the geographical position of a user or asset on a digital map",
+    image: "../../public/tracker.png",
+    tags: ["React", "Node.js", "Socket.io", "leaflet"],
+    demoUrl: "https://realtime-tracker-e55d.onrender.com/",
+    githubUrl: "https://github.com/Het-Dhorajiya-0305/realtime-tracker",
+  }
+];
+
+export { cn, skills ,projects};
