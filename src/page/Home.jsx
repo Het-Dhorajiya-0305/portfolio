@@ -7,6 +7,7 @@ import Skills from '../component/Skills.jsx'
 import Project from '../component/Project.jsx'
 import ContactUs from '../component/ContactUs.jsx'
 import Footer from '../component/Footer.jsx'
+import Appear from '../component/Appear.jsx' // Add this import
 
 function Home() {
     return (
@@ -14,11 +15,11 @@ function Home() {
             <StarBackground />
             <Navbar />
             <main>
-                <Hero />
-                <AboutMe />
-                <Skills />
-                <Project />
-                <ContactUs />
+                <Appear><Hero /></Appear>
+                <Appear><AboutMe /></Appear>
+                <Appear><Skills /></Appear>
+                <Appear><Project /></Appear>
+                <Appear><ContactUs /></Appear>
             </main>
             <Footer />
         </div>
