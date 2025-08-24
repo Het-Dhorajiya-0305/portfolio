@@ -11,7 +11,7 @@ function ContactUs() {
 
         setIsSubmitting(true);
         setTimeout(() => {
-            toast.success("Message sent!",{
+            toast.success("Message sent!", {
                 autoClose: 1000,
             });
             setIsSubmitting(false);
@@ -48,7 +48,7 @@ function ContactUs() {
                                 id="name"
                                 name="name"
                                 required
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary placeholder:text-secondary"
                                 placeholder="Enter your name"
                             />
                         </div>
@@ -58,7 +58,6 @@ function ContactUs() {
                                 htmlFor="email"
                                 className="block text-sm font-medium mb-2"
                             >
-                                {" "}
                                 Your Email
                             </label>
                             <input
@@ -66,7 +65,7 @@ function ContactUs() {
                                 id="email"
                                 name="email"
                                 required
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary placeholder:text-secondary"
                                 placeholder="Enter your email"
                             />
                         </div>
@@ -83,7 +82,7 @@ function ContactUs() {
                                 id="message"
                                 name="message"
                                 required
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
+                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none placeholder:text-secondary"
                                 placeholder="Hello, I'd like to talk about..."
                             />
                         </div>
