@@ -57,6 +57,16 @@ const projects = [
   },
   {
     id: 2,
+    title: "AI Medical Voice Agent",
+    description:
+      "A voice-enabled AI assistant for symptom analysis, patient triage, and healthcare support.",
+    image:"https://res.cloudinary.com/dhxwyq122/image/upload/v1759056545/Screenshot_2025-09-28_160140_dkjqkh.png",
+    tags: ["React", "NodeJs", "MongoDB", "Assembly AI","VAPI AI"],
+    demoUrl: "https://ai-medical-voice-agent-omega.vercel.app/",
+    githubUrl: "https://github.com/Het-Dhorajiya-0305/ai-medical-voice-agent",
+  },
+  {
+    id: 2,
     title: "CodeBoard",
     description:
       "Code Board is a real-time code collaboration platform that allows multiple users to edit and share code simultaneously.",
