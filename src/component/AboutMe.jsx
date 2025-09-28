@@ -36,7 +36,7 @@ function AboutMe() {
                         <p className='text-muted-foreground'>I enjoy working across both frontend and backend, with a particular focus on scalable systems, backend development, and emerging technologies like AI/ML.For me, coding is not just about syntax or logic — it’s about creating tools and systems that genuinely make a difference.I’m currently looking for opportunities to grow, collaborate, and contribute to projects that matter.</p>
                         <div className="flex sm:flex-row gap-4 pt-4 justify-center">
                             <a href="#contact" className='cosmic-button w-max'>Get In Touch</a>
-                            <a href="https://drive.google.com/file/d/1NXeO6VZalZagB7xMAFigjtZe7B1eapw0/view?usp=drive_link" className='px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 w-max' target='blank'>My Resume</a>
+                            <a href="https://drive.google.com/file/d/1KTE3ZskvFiRa2iAwmDt_7MM2md2FkGpt/view?usp=sharing" className='px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 w-max' target='blank'>My Resume</a>
                         </div>
                     </div>
                     <div className="flex flex-col items-center justify-center max-lg:flex-2">
