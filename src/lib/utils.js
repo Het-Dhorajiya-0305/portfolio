@@ -8,46 +8,56 @@ import nodeJsLogo from "../../public/nodeJs.png"
 import mySqlLogo from "../../public/mySql.png"
 import gitLogo from "../../public/git.png"
 import githubLogo from "../../public/github.png"
-import awsLogo from "../../public/aws.png" 
-import cpp from "../../public/cpp.png" 
-import mongoDb from "../../public/MongoDB.png" 
-import tailwindcss from "../../public/TailwindCSS.png" 
-import express from "../../public/Express.png" 
-import postman from "../../public/Postman.png" 
+import awsLogo from "../../public/aws.png"
+import cpp from "../../public/cpp.png"
+import mongoDb from "../../public/MongoDB.png"
+import tailwindcss from "../../public/TailwindCSS.png"
+import express from "../../public/Express.png"
+import postman from "../../public/Postman.png"
 
 
 
 const cn = (...inputs) => {
-    return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs));
 }
 
 const skills = [
-    // language
-    { name: "JavaScript", level: 80, category: "language" ,loc:jsLogo},
-    { name: "C++", level: 80, category: "language" ,loc:cpp},
-    { name: "Java", level: 60, category: "language" ,loc:javaLogo},
-    { name: "Python", level: 60, category: "language" ,loc:pythonLogo},
+  // language
+  { name: "JavaScript", level: 80, category: "language", loc: jsLogo },
+  { name: "C++", level: 80, category: "language", loc: cpp },
+  { name: "Java", level: 60, category: "language", loc: javaLogo },
+  { name: "Python", level: 60, category: "language", loc: pythonLogo },
 
-    // Frontend
-    { name: "React", level: 70, category: "frameworks" ,loc:reactLogo},
-    { name: "Node.js", level: 80, category: "frameworks" ,loc:nodeJsLogo},
-    { name: "Express", level: 75, category: "frameworks" ,loc:express},
+  // Frontend
+  { name: "React", level: 70, category: "frameworks", loc: reactLogo },
+  { name: "Node.js", level: 80, category: "frameworks", loc: nodeJsLogo },
+  { name: "Express", level: 75, category: "frameworks", loc: express },
 
-    // database
-    { name: "MongoDB", level: 70, category: "database" ,loc:mongoDb},
-    { name: "MySQL", level: 65, category: "database" ,loc:mySqlLogo},
+  // database
+  { name: "MongoDB", level: 70, category: "database", loc: mongoDb },
+  { name: "MySQL", level: 65, category: "database", loc: mySqlLogo },
 
-    // Tools
-    { name: "Git", level: 80, category: "tools" ,loc:gitLogo},
-    { name: "GitHub", level: 80, category: "tools" ,loc:githubLogo},
-    { name: "Tailwind CSS", level: 70, category: "tools" ,loc:tailwindcss},
-    { name: "Postman", level: 65, category: "tools" ,loc:postman},
-    { name: "AWS", level: 55, category: "tools" ,loc:awsLogo},
+  // Tools
+  { name: "Git", level: 80, category: "tools", loc: gitLogo },
+  { name: "GitHub", level: 80, category: "tools", loc: githubLogo },
+  { name: "Tailwind CSS", level: 70, category: "tools", loc: tailwindcss },
+  { name: "Postman", level: 65, category: "tools", loc: postman },
+  { name: "AWS", level: 55, category: "tools", loc: awsLogo },
 ];
 
 const projects = [
   {
     id: 1,
+    title: "AI Medical Voice Agent",
+    description:
+      "A voice-enabled AI assistant for symptom analysis, patient triage, and healthcare support.",
+    image: "https://res.cloudinary.com/dhxwyq122/image/upload/v1759056545/Screenshot_2025-09-28_160140_dkjqkh.png",
+    tags: ["React", "NodeJs", "MongoDB", "Assembly AI", "VAPI AI"],
+    demoUrl: "https://ai-medical-voice-agent-omega.vercel.app/",
+    githubUrl: "https://github.com/Het-Dhorajiya-0305/ai-medical-voice-agent",
+  },
+  {
+    id: 2,
     title: "Plashoes E-commerce",
     description: "Plashoes is a full-stack eCommerce website built to provide a seamless online shopping experience for footwear",
     image: "https://res.cloudinary.com/dhxwyq122/image/upload/v1755978213/plashoes_ulbv6g.png",
@@ -55,36 +65,37 @@ const projects = [
     demoUrl: "https://plashoes-frontend.onrender.com/",
     githubUrl: "https://github.com/Het-Dhorajiya-0305/Plashoes",
   },
+
   {
-    id: 2,
-    title: "AI Medical Voice Agent",
+    id: 3,
+    title: "Expenso",
     description:
-      "A voice-enabled AI assistant for symptom analysis, patient triage, and healthcare support.",
-    image:"https://res.cloudinary.com/dhxwyq122/image/upload/v1759056545/Screenshot_2025-09-28_160140_dkjqkh.png",
-    tags: ["React", "NodeJs", "MongoDB", "Assembly AI","VAPI AI"],
-    demoUrl: "https://ai-medical-voice-agent-omega.vercel.app/",
-    githubUrl: "https://github.com/Het-Dhorajiya-0305/ai-medical-voice-agent",
+      "Expenso is a full-stack expense tracker application that helps users manage their income and expenses, categorize transactions, and visualize spending patterns with an intuitive dashboard.",
+    image: "https://res.cloudinary.com/dhxwyq122/image/upload/v1769779408/Screenshot_2026-01-30_185152_ab86tu.png",
+    tags: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Chart.js"],
+    demoUrl: "https://expens0.vercel.app/",
+    githubUrl: "https://github.com/Het-Dhorajiya-0305/Expense-tracker",
   },
   {
-    id: 2,
+    id: 4,
     title: "CodeBoard",
     description:
       "Code Board is a real-time code collaboration platform that allows multiple users to edit and share code simultaneously.",
-    image:"https://res.cloudinary.com/dhxwyq122/image/upload/v1755978321/codeboard_lpaddh.png",
-    tags: ["React", "NodeJs", "MongoDB", "Socket.io","Monaco Editor"],
+    image: "https://res.cloudinary.com/dhxwyq122/image/upload/v1755978321/codeboard_lpaddh.png",
+    tags: ["React", "NodeJs", "MongoDB", "Socket.io", "Monaco Editor"],
     demoUrl: "https://code-board-colla.vercel.app/",
     githubUrl: "https://github.com/Het-Dhorajiya-0305/code-board",
-  },
-  {
-    id: 3,
-    title: "Real-Time Location Tracker",
-    description:
-      "The Live Location Tracker is a real-time system that continuously monitors and displays the geographical position of a user or asset on a digital map",
-    image: "https://res.cloudinary.com/dhxwyq122/image/upload/v1755978357/tracker_qrttz2.png",
-    tags: ["React", "Node.js", "Socket.io", "leaflet"],
-    demoUrl: "https://realtime-tracker-e55d.onrender.com/",
-    githubUrl: "https://github.com/Het-Dhorajiya-0305/realtime-tracker",
   }
+  // {
+  //   id: 5,
+  //   title: "Real-Time Location Tracker",
+  //   description:
+  //     "The Live Location Tracker is a real-time system that continuously monitors and displays the geographical position of a user or asset on a digital map",
+  //   image: "https://res.cloudinary.com/dhxwyq122/image/upload/v1755978357/tracker_qrttz2.png",
+  //   tags: ["React", "Node.js", "Socket.io", "leaflet"],
+  //   demoUrl: "https://realtime-tracker-e55d.onrender.com/",
+  //   githubUrl: "https://github.com/Het-Dhorajiya-0305/realtime-tracker",
+  // }
 ];
 
-export { cn, skills ,projects};
+export { cn, skills, projects };
