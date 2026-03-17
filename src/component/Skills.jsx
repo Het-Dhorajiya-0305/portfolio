@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { cn, skills } from '../lib/utils';
 
 function Skills() {
